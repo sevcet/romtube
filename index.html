@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>222</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<link rel="stylesheet" type="text/css"  href="content/styles.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+
+                <script type="text/javascript" src="java/SSAITSlayer.js"></script>
+		
+		<!-- Setup video player-->
+		<script type="text/javascript">
+			SSAITSUtils.onReady(function(){
+
+				new SSAITSlayer({		
+					//main settings
+					instanceName:"player1",
+					parentId:"myDiv",
+					playlistsId:"playlists",
+					mainFolderPath:"content",
+					skinPath:"crno",
+					displayType:"fullscreen",
+					initializeOnlyWhenVisible:"no",
+					fillEntireposterScreen:"yes",
+					useVectorIcons:"no",
+					fillEntireVideoScreen:"no",
+					goFullScreenOnButtonPlay:"no",
+					playsinline:"yes",
+                                        youtubeAPIKey:"AIzaSyBBODGogiFCnPFav1jZQ0aUyhEl1J2j880", 
+                                        normalHEXButtonsColor:"#666666",
+					googleAnalyticsTrackingCode:"", 
+					useDeepLinking:"yes",
+					showPreloader:"yes",
+					preloaderBackgroundColor:"#000000",
+					preloaderFillColor:"#FFFFFF",
+					addKeyboardSupport:"yes",
+					autoScale:"yes",
+					showButtonsToolTip:"yes",  
+					playAfterVideoStop:"yes",
+					autoPlay:"yes",
+					autoPlayText:"Click To Unmute",
+					loop:"no",
+					shuffle:"no",
+					showErrorInfo:"no",
+				        maxWidth:980,
+					maxHeight:552,
+					volume:.8,
+					rewindTime:3,
+					buttonsToolTipHideDelay:1,
+					backgroundColor:"#000000",
+					videoBackgroundColor:"#000000",
+					posterBackgroundColor:"#000000",
+					buttonsToolTipFontColor:"#5a5a5a",  
+					//playlists/categories settings
+					showPlaylistsSearchInput:"yes",
+					usePlaylistsSelectBox:"yes",
+					showPlaylistsButtonAndPlaylists:"no",
+					showPlaylistsByDefault:"no",
+					thumbnailSelectedType:"opacity",
+					startAtPlaylist:0,
+					buttonsMargins:15,
+					thumbnailMaxWidth:350, 
+					thumbnailMaxHeight:350,
+					horizontalSpaceBetweenThumbnails:40,
+					verticalSpaceBetweenThumbnails:40,
+					inputBackgroundColor:"#333333",
+					inputColor:"#999999",
+					//playlist settings
+					showPlaylistButtonAndPlaylist:"yes",
+					playlistPosition:"right",
+					showPlaylistByDefault:"yes",
+					showPlaylistName:"yes",
+					showSearchInput:"yes",
+					showLoopButton:"yes",
+					showShuffleButton:"yes",
+					showPlaylistOnFullScreen:"yes",
+					showNextAndPrevButtons:"yes",
+					showThumbnail:"yes",
+					showOnlyThumbnail:"no",
+					forceDisableDownloadButtonForFolder:"no",
+					addMouseWheelSupport:"yes", 
+					startAtRandomVideo:"no",
+					stopAfterLastVideoHasPlayed:"no",
+					addScrollOnMouseMove:"no",
+					randomizePlaylist:'no', 
+					playlistRightWidth:290,
+					playlistBottomHeight:380,
+					startAtVideo:0,
+					maxPlaylistItems:500,
+					thumbnailWidth:71,
+					thumbnailHeight:106,
+					spaceBetweenControllerAndPlaylist:1,
+					spaceBetweenThumbnails:1,
+					scrollbarOffestWidth:8,
+					scollbarSpeedSensitivity:.5,
+					playlistBackgroundColor:"#000000",
+					playlistNameColor:"#FFFFFF",
+					thumbnailNormalBackgroundColor:"#1b1b1b",
+					thumbnailHoverBackgroundColor:"#313131",
+					thumbnailDisabledBackgroundColor:"#272727",
+					searchInputBackgroundColor:"#000000",
+					searchInputColor:"#999999",
+					youtubeAndFolderVideoTitleColor:"#FFFFFF",
+					folderAudioSecondTitleColor:"#999999",
+					youtubeOwnerColor:"#888888",
+					youtubeDescriptionColor:"#888888",
+					mainSelectorBackgroundSelectedColor:"#FFFFFF",
+					mainSelectorTextNormalColor:"#FFFFFF",
+					mainSelectorTextSelectedColor:"#000000",
+					mainButtonBackgroundNormalColor:"#212021",
+					mainButtonBackgroundSelectedColor:"#FFFFFF",
+					mainButtonTextNormalColor:"#FFFFFF",
+					mainButtonTextSelectedColor:"#000000",
+					//controller settings
+					showController:"yes",
+					showControllerWhenVideoIsStopped:"yes",
+					showNextAndPrevButtonsInController:"yes",
+					showRewindButton:"yes",
+					showPlaybackRateButton:"yes",
+					showVolumeButton:"yes",
+					showTime:"yes",
+					showQualityButton:"yes",
+					showInfoButton:"no",
+					showDownloadButton:"no",
+					showShareButton:"no",
+					showEmbedButton:"no",
+					showChromecastButton:"yes",
+					showFullScreenButton:"no",
+					disableVideoScrubber:"no",
+					showScrubberWhenControllerIsHidden:"yes",
+					showMainScrubberToolTipLabel:"no", 
+					repeatBackground:"yes",
+					controllerHeight:43,
+					controllerHideDelay:3,
+					startSpaceBetweenButtons:10,
+					spaceBetweenButtons:10,
+					scrubbersOffsetWidth:2,
+					mainScrubberOffestTop:17,
+					timeOffsetLeftWidth:2,
+					timeOffsetRightWidth:2,
+					timeOffsetTop:-1,
+					volumeScrubberHeight:80,
+					volumeScrubberOfsetHeight:20,
+					timeColor:"#888888",
+					youtubeQualityButtonNormalColor:"#888888",
+					youtubeQualityButtonSelectedColor:"#FFFFFF",
+					scrubbersToolTipLabelBackgroundColor:"#FFFFFF",
+					scrubbersToolTipLabelFontColor:"#5a5a5a",
+                                        //embed window and info window
+					embedAndInfoWindowCloseButtonMargins:5,
+					borderColor:"#333333",
+					mainLabelsColor:"#FFFFFF",
+					secondaryLabelsColor:"#a1a1a1",
+					shareAndEmbedTextColor:"#5a5a5a",
+					inputBackgroundColor:"#000000",
+					inputColor:"#FFFFFF", 
+					//audio visualizer
+					audioVisualizerLinesColor:"#0099FF",
+					audioVisualizerCircleColor:"#FFFFFF",
+					//lightbox settings
+					closeLightBoxWhenPlayComplete:"no",
+					lightBoxBackgroundOpacity:.6,
+					lightBoxBackgroundColor:"#000000",
+					//sticky on scroll
+					stickyOnScroll:"no",
+					stickyOnScrollShowOpener:"yes",
+					stickyOnScrollWidth:"700",
+					stickyOnScrollHeight:"394",
+					//sticky display settings
+					showOpener:"yes",
+					showOpenerPlayPauseButton:"yes",
+					verticalPosition:"bottom",
+					horizontalPosition:"center",
+					showPlayerByDefault:"no",
+					animatePlayer:"no",
+					openerAlignment:"right",
+					mainBackgroundImagePath:"content/minimal_skin_dark/main-background.png",
+					openerEqulizerOffsetTop:-1,
+					openerEqulizerOffsetLeft:3,
+					offsetX:0,
+					offsetY:0,
+					//playback rate / speed
+					defaultPlaybackRate:1, //0.25, 0.5, 1, 1.25, 1.2, 2
+					//cuepoints
+					executeCuepointsOnlyOnce:"no",
+					//annotations
+					showAnnotationsPositionTool:"no", 
+					//a to b loop
+					useAToB:"yes",
+					atbTimeBackgroundColor:"transparent",
+					atbTimeTextColorNormal:"#888888",
+					atbTimeTextColorSelected:"#FFFFFF",
+					atbButtonTextNormalColor:"#888888",
+					atbButtonTextSelectedColor:"#FFFFFF",
+					atbButtonBackgroundNormalColor:"#FFFFFF",
+					atbButtonBackgroundSelectedColor:"#000000",
+					//thumbnails preview
+					thumbnailsPreviewWidth:196,
+					thumbnailsPreviewHeight:110,
+					thumbnailsPreviewBackgroundColor:"#000000",
+					thumbnailsPreviewBorderColor:"#666",
+					thumbnailsPreviewLabelBackgroundColor:"#666",
+					thumbnailsPreviewLabelFontColor:"#FFF",
+					// context menu
+					showContextmenu:'yes',
+					showScriptDeveloper:"no",
+					contextMenuBackgroundColor:"#1f1f1f",
+					contextMenuBorderColor:"#1f1f1f",
+					contextMenuSpacerColor:"#333",
+					contextMenuItemNormalColor:"#666666",
+					contextMenuItemSelectedColor:"#FFFFFF",
+					contextMenuItemDisabledColor:"#333"
+				});
+			});
+		</script>
+		
+	</head>
+
+	<body style="background-color:#999999; padding:0px; margin:0px;">	
+	
+		<div id="myDiv" style="position:relative; left:0px; top:0px;"></div>
+	
+		<!--  Playlists -->
+			<ul id="playlists" style="display:none;">
+				<li data-source="playlist1" data-playlist-name="Saban Bajramovic" data-thumbnail-path="content/thumbnails/p-html.jpg">
+				 </li>
+
+				<li data-source="playlist2" data-playlist-name="druga" data-thumbnail-path="content/thumbnails/p-html.jpg">
+				 </li>
+				<li data-source="playlist3" data-playlist-name="treca" data-thumbnail-path="content/thumbnails/p-html.jpg">
+				 </li>
+				<li data-source="playlist4" data-playlist-name="cetvrta" data-thumbnail-path="content/thumbnails/p-html.jpg">
+				 </li>
+				<li data-source="playlist5" data-playlist-name="peta" data-thumbnail-path="content/thumbnails/p-html.jpg">
+				 </li>
+				<li data-source="playlist6" data-playlist-name="sesta" data-thumbnail-path="content/thumbnails/p-html.jpg">
+				 </li>
+				<li data-source="playlist7" data-playlist-name="sedma" data-thumbnail-path="content/thumbnails/p-html.jpg">
+				 </li>
+				<li data-source="playlist8" data-playlist-name="osma" data-thumbnail-path="content/thumbnails/p-html.jpg">
+				 </li>
+				<li data-source="playlist9" data-playlist-name="deveta" data-thumbnail-path="content/thumbnails/p-html.jpg">
+				 </li>
+				<li data-source="playlist10" data-playlist-name="deseta" data-thumbnail-path="content/thumbnails/p-html.jpg">
+				 </li> 
+				<li data-source="playlist11" data-playlist-name="jedanajesta" data-thumbnail-path="content/thumbnails/p-html.jpg">
+				 </li>
+				<li data-source="playlist12" data-playlist-name="dvanajesta" data-thumbnail-path="content/thumbnails/p-html.jpg">
+				 </li>
+			 
+			</ul>
+
+			<!--  HTML playlist -->
+			<ul id="playlist1" style="display:none;">
+				
+				<li data-thumb-source="https://www.themoviedb.org/t/p/w220_and_h330_face/pAe4mqaHI7wOS7vz4btYAiX4UVN.jpg" data-video-source="https://vidsrc.to/embed/movie/729679"">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Cubismo feat. Saban Bajramovic - Geljan dade </p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://image.tmdb.org/t/p/w200/w80MOoF0ec5jLXOFpqWV77pzpxO.jpg" data-video-source="https://vidsrc.to/embed/movie/729679">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Toma</p>
+							<p class="SSAITS-thumbnail-description">Biopic about Serbian folk singer Toma Zdravković, the man who is remembered not only for his songs and unique way he was singing them, but also as a bohemian, both in his behavior and his soul.</p>
+						</div>
+					</div>
+				</li>
+			<li data-thumb-source="https://image.tmdb.org/t/p/w200/QUnDGMLL2HX687OjpTePcgXCWJ.jpg" data-video-source="https://filemoon.sx/e/6l8g7j2sqxcx/SOS.mp4"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Slatko od snova</p>
+							<p class="SSAITS-thumbnail-description">Leontina  </p>
+						</div>
+					</div>
+				</li>
+
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1pyobxeQ-AcnsgwRPcCq3xIOk4OlBoN5i">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title"> Koncert - Esma, Saban, Boban</p>
+							<p class="SSAITS-thumbnail-description">ri?a je o mladoj devojci (Dragani Mirkovi?) koja radi u „Mekdonaldsu“, a sanja o slavi na estradi. Raznose?i porudžbine ona upoznaje kralja šou-biznisa koji je i vlasnik Fabrike snova, što ?e joj pružiti mogu?nost za ostvarenje sna</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/tB4PMgTy7WU/1.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1K16jXuckE4Hz-Cuboq_pLlo9xYR-9AhT">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Pitao Sam Malog Puža - Šaban Bajramović Uzivo </p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1n9KdBqeDF1mS5ir_F2JDmapyaxuD7SH4">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">SABAN BAJRAMOVIĆ - Andjeo čuvar _ Live 2006 _ HD  </p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1yPs9O20ch_21sojtvNCdAR4Ym1XUDZ_6">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title"> Šaban Bajramović - Đelem Đelem (Exit06)</p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1yI0lgwDj2c7bWNJ4Im1NZJxhLmCfA_m6">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title"> Šaban Bajramović - Geljam dade Live EXIT 2006</p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1L8_32qXnYLedw6ZzUBu11Cor04SKoQkQ">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title"> SABAN BAJRAMOVIĆ - Gipsy legend , čaje mori _ Live 2006</p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic</p>
+						</div>
+					</div>
+				</li> 
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1vS7d0HVwpkkef4DYTMsprhI6-KTVLDGG">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">SABAN BAJRAMOVIĆ - Gipsy song 2006 </p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic </p>
+						</div>
+					</div>
+				</li>
+
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1kf8eGnJ54LxLKAwbW-Gv_w-W0Z5tFc29">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Šaban Bajramović - Hanuma _ Ðeli Mara (Mesečina) </p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1OGcNWz2kZMw9Gw0n5scKsV8GZGsj2qwr">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic - Hanuma - (LIVE 1995)  </p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1k7pMqsi1MHBaHlKZxLRdbRPB_8xzfMPN">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">ŠABAN BAJRAMOVIĆ - Hop, Hop, Hop (HD) LIVE 2006</p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1Wus_d3RMAvJ0y6ErUb_Sh7dFXkjkmtsi">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title"> Saban Bajramovic - Jasmina - (LIVE 1995). </p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1vHYNT7UNkp6Bb2E5XaxQ1bosuLSbItW4">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic - Kerta mange daje  (LIVE 1995)</p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1l19vuAxm0S_bqzMo3Nk59aOv26PrEVmz">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic - Ko zna, zna - uzivo TV Palma 1996 - 1. deo </p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1i0ewWCOp6Fu1U9Q_mCGzQLb1SMjKj90R">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic - Ko zna, zna - uzivo TV Palma 1996 - 3. deo </p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1d_p7hXs-Acr2PyP1x5T_qWQ1LCtWs93u">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic - Ko zna, zna - uzivo TV Palma 1996 - 4. deo  </p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1rU5ySMxCW8YsrZrkm-mTyu-YHWXXE3F_">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title"> Saban Bajramovic - Lele, lele - (LIVE 1995)</p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic </p>
+						</div>
+					</div>
+				</li> 
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=124JSuwyvuQiAdE8hilDbUZvuFirVhvkD">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic - Lema, lema - (LIVE 1995)</p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1xl5a3aYylLe4ui7o6qTv1RjCKj58Fjjv">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic - Lutka, lutka - (LIVE 1995</p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1PQUm665AThtAiwPf4DupKUi3CwZ_q66T">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">ŠABAN BAJRAMOVIĆ - Maruška (HD) LIVE 2006.</p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1g2xOx0hKMvSAo3uCBFYixa6QcgmEY31_">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban bajramovic - O matorno - Pijanica - (LIVE 1995) </p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1QL0XTzCQEQonJyEuiqB8_C5mSJqg6i0e">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic - Obrsin perela caje   (LIVE 1995) </p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1fLq20ngcrYnGZ9wB-hJzWGoYnRSrTAoE">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic - Opa cupa - (LIVE 1995)</p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1orXRcBW7UbETQ8ovZA3Xsrx_ozwjTbj0">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic - Opa Cupa Koncert</p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1iAyQTY83fppVXRq80lTXCcOlKAVkgjrn">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic - Parno gras (LIVE 1995) </p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1HaaD4l7n2Ya5mNx2KwlTNT1PZFA9SzE4">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title"> Saban Bajramovic - Pitao Sam Malog Puza (uzivo)</p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=11K51j-S2NmEzmdf6CFiyFj5OlupTbdG2">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic - Rovena, rovena  (LIVE 1995)</p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li> 
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1BLyuW5_0rOBiXw5vtoWTJrrVvBAcGBoK">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic - Sajbija - (LIVE 1995)</p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1Q0hB3A7veix6u5jwevXMGrahDRgauQyU">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic - Sila kale bal (LIVE 1995)</p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=16ZRjgKssP8Ysnm0pv91YGTGvo-NwZfKU">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic -I Barval pudela.</p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://dl.dropboxusercontent.com/s/22t2d4i16da2a93/%C5%A0aban%20Bajramovi%C4%87%20%26%20Dobrovoljno%20kova%C4%8Dko%20dru%C5%A1tvo%20-%20Koncert.mp4?dl=0">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Šaban Bajramović & Dobrovoljno kovačko društvo - Koncert (TV RIP)</p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=12IIXG2xZ69gcultt3x-I90QpPpbtl0sG">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic ~ Vaker. </p>
+							<p class="SSAITS-thumbnail-description"> Saban Bajramovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1-PuOKAH1in9UCIaiaIWgVNZKAe2-hUEg">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic Akaja Rat</p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1HPOJcUzL-PsnxeCLF_ZbPiVLuBhS6gav">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic Gelo O Cuca Ko Foro Uzivo</p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=14nMnfCNQ04f2lM0unQmq2RpP0-uCqNvi">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic i Juzni Vetar - Kasandra (Audio 1997) </p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1mk7NS30Tiv57YkNirPtd_95UZZw8_6_Z">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramović Live Exlusive part 1 </p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1x1_iBhCz_t-7rI_OwYyvc8EzXqVoMzw4">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title"> Saban Bajramovic Oj Devla Devla Gudleja Uzivo</p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li> 
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1i4pXuobB5lzE1jE8EAXxl5lb8B_BURfT">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Saban Bajramovic-Geljam dade (Uzivo) </p>
+							<p class="SSAITS-thumbnail-description">  Saban Bajramovic</p>
+						</div>
+					</div>
+				</li>
+							 
+ 
+			</ul> 
+			<!--  HTML playlist -->
+			<ul id="playlist2" style="display:none;">
+				
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://www.youtube.com/watch?v=-g8rYjBWZcQ&ab_channel=Generacija5-Topic">	
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Multiple Subtitles & Video Quality</p>
+							<p class="SSAITS-thumbnail-description">Each video can have one or more subtitles (txt or srt).</p>
+						</div>
+					</div>
+				</li>
+							 
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist3" style="display:none;">
+				
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://www.youtube.com/watch?v=vdM1_aARth4&ab_channel=Genercija5music">	
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Multiple Subtitles & Video Quality</p>
+							<p class="SSAITS-thumbnail-description">Each video can have one or more subtitles (txt or srt).</p>
+						</div>
+					</div>
+				</li>
+							 
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist4" style="display:none;">
+				
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://www.youtube.com/watch?v=PLFWECwbJO0&ab_channel=Riblja%C4%8CorbaOfficialchannel">	
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Multiple Subtitles & Video Quality</p>
+							<p class="SSAITS-thumbnail-description">Each video can have one or more subtitles (txt or srt).</p>
+						</div>
+					</div>
+				</li>
+							 
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist5" style="display:none;">
+				
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://www.youtube.com/watch?v=2WoeAIz0jXU&ab_channel=PGPRTS-Zvani%C4%8DniKanal">	
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Multiple Subtitles & Video Quality</p>
+							<p class="SSAITS-thumbnail-description">Each video can have one or more subtitles (txt or srt).</p>
+						</div>
+					</div>
+				</li>
+							 
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist6" style="display:none;">
+				
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://www.youtube.com/watch?v=JANeofK2WTo&ab_channel=AhmetVranjkovina">	
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Multiple Subtitles & Video Quality</p>
+							<p class="SSAITS-thumbnail-description">Each video can have one or more subtitles (txt or srt).</p>
+						</div>
+					</div>
+				</li>
+							 
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist7" style="display:none;">
+				
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://www.youtube.com/watch?v=MhaLAIzmkbY&ab_channel=RTSNajlep%C5%A1enarodnepesme-Zvani%C4%8Dnikanal">	
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Multiple Subtitles & Video Quality</p>
+							<p class="SSAITS-thumbnail-description">Each video can have one or more subtitles (txt or srt).</p>
+						</div>
+					</div>
+				</li>
+							 
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist8" style="display:none;">
+				
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://www.youtube.com/watch?v=sZjkowJfbBo&ab_channel=Divljejagode-Topic">	
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Multiple Subtitles & Video Quality</p>
+							<p class="SSAITS-thumbnail-description">Each video can have one or more subtitles (txt or srt).</p>
+						</div>
+					</div>
+				</li>
+							 
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist9" style="display:none;">
+				
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://www.youtube.com/watch?v=GKpgiolQyxo&ab_channel=PedjaMedenica">	
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Multiple Subtitles & Video Quality</p>
+							<p class="SSAITS-thumbnail-description">Each video can have one or more subtitles (txt or srt).</p>
+						</div>
+					</div>
+				</li>
+							 
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist10" style="display:none;">
+				
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://www.youtube.com/embed/Q7e6CAnZZog?rel=0&controls=0&modestbranding=1&autoplay=1&loop=1">	
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Multiple Subtitles & Video Quality</p>
+							<p class="SSAITS-thumbnail-description">Each video can have one or more subtitles (txt or srt).</p>
+						</div>
+					</div>
+				</li>
+							 
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist11" style="display:none;">
+				
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://2embed.org//embed/movie?tmdb=315162">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">Multiple Subtitles & Video Quality</p>
+							<p class="SSAITS-thumbnail-description">Each video can have one or more subtitles (txt or srt).</p>
+						</div>
+					</div>
+				</li>
+							 
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist12" style="display:none;">
+				
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1AXzYBrAAo3ftkMHcDHtt5MwJyQ7EywKn">	
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">ŠABAN BAJRAMOVIĆ - Hop, Hop, Hop (HD) LIVE 2006</p>
+							<p class="SSAITS-thumbnail-description">Each video can have one or more subtitles (txt or srt).</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="content/thumbnails/small-fwd.jpg" data-video-source="https://drive.google.com/uc?export=download&id=1GONOaFtcnWYpV9nD9IbC95Z1sBzkTKVl">	
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-thumbnail-title">ŠABAN BAJRAMOVIĆ - Maruška (HD) LIVE 2006</p>
+							<p class="SSAITS-thumbnail-description">Each video can have one or more subtitles (txt or srt).</p>
+						</div>
+					</div>
+				</li>							 
+ 
+			</ul>
+
+
+
+
+
+
+
+
+			
+	</body>
+</html>
+
+
+
+
