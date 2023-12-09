@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>222</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<link rel="stylesheet" type="text/css"  href="content/styles.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+
+                <script type="text/javascript" src="java/SSAITSlayer.js"></script>
+		
+		<!-- Setup video player-->
+		<script type="text/javascript">
+			SSAITSUtils.onReady(function(){
+
+				new SSAITSlayer({		
+					//main settings
+					instanceName:"player1",
+					parentId:"myDiv",
+					playlistsId:"playlists",
+					mainFolderPath:"content",
+					skinPath:"crno",
+					displayType:"fullscreen",
+					initializeOnlyWhenVisible:"no",
+					fillEntireposterScreen:"yes",
+					useVectorIcons:"no",
+					fillEntireVideoScreen:"yes",
+					goFullScreenOnButtonPlay:"no",
+					playsinline:"no",
+                                        youtubeAPIKey:"AIzaSyBBODGogiFCnPFav1jZQ0aUyhEl1J2j880", 
+                                        normalHEXButtonsColor:"#666666",
+					useDeepLinking:"yes",
+					showPreloader:"yes",
+					preloaderBackgroundColor:"#000000",
+					preloaderFillColor:"#FFFFFF",
+					addKeyboardSupport:"yes",
+					autoScale:"yes",
+					showButtonsToolTip:"yes",  
+					playAfterVideoStop:"yes",
+					autoPlay:"no",
+					autoPlayText:"Click To Unmute",
+					loop:"no",
+					shuffle:"no",
+					showErrorInfo:"no",
+				        maxWidth:980,
+					maxHeight:552,
+					volume:.8,
+					rewindTime:10,
+					buttonsToolTipHideDelay:1.5,
+					backgroundColor:"#000000",
+					videoBackgroundColor:"#000000",
+					posterBackgroundColor:"#000000",
+					buttonsToolTipFontColor:"#5a5a5a",  
+					//playlists/categories settings
+					showPlaylistsSearchInput:"yes",
+					usePlaylistsSelectBox:"yes",
+					showPlaylistsButtonAndPlaylists:"no",
+					showPlaylistsByDefault:"no",
+					thumbnailSelectedType:"opacity",
+					startAtPlaylist:0,
+					buttonsMargins:15,
+					thumbnailMaxWidth:350, 
+					thumbnailMaxHeight:350,
+					horizontalSpaceBetweenThumbnails:40,
+					verticalSpaceBetweenThumbnails:40,
+					inputBackgroundColor:"#333333",
+					inputColor:"#999999",
+					//playlist settings
+					showPlaylistButtonAndPlaylist:"yes",
+					playlistPosition:"right",
+					showPlaylistByDefault:"yes",
+					showPlaylistName:"yes",
+					showSearchInput:"yes",
+					showLoopButton:"yes",
+					showShuffleButton:"yes",
+					showPlaylistOnFullScreen:"yes",
+					showNextAndPrevButtons:"yes",
+					showThumbnail:"yes",
+					showOnlyThumbnail:"no",
+					forceDisableDownloadButtonForFolder:"no",
+					addMouseWheelSupport:"yes", 
+					startAtRandomVideo:"yes",
+					stopAfterLastVideoHasPlayed:"no",
+					addScrollOnMouseMove:"yes",
+					randomizePlaylist:'no', 
+					playlistRightWidth:290,
+					playlistBottomHeight:380,
+					startAtVideo:0,
+					maxPlaylistItems:50,
+					thumbnailWidth:100,
+					thumbnailHeight:56,
+					spaceBetweenControllerAndPlaylist:1,
+					spaceBetweenThumbnails:1,
+					scrollbarOffestWidth:8,
+					scollbarSpeedSensitivity:.5,
+					playlistBackgroundColor:"#000000",
+					playlistNameColor:"#FFFFFF",
+					thumbnailNormalBackgroundColor:"#1b1b1b",
+					thumbnailHoverBackgroundColor:"#313131",
+					thumbnailDisabledBackgroundColor:"#272727",
+					searchInputBackgroundColor:"#000000",
+					searchInputColor:"#999999",
+					youtubeAndFolderVideoTitleColor:"#FFFFFF",
+					folderAudioSecondTitleColor:"#999999",
+					youtubeOwnerColor:"#888888",
+					youtubeDescriptionColor:"#888888",
+					mainSelectorBackgroundSelectedColor:"#FFFFFF",
+					mainSelectorTextNormalColor:"#FFFFFF",
+					mainSelectorTextSelectedColor:"#000000",
+					mainButtonBackgroundNormalColor:"#212021",
+					mainButtonBackgroundSelectedColor:"#FFFFFF",
+					mainButtonTextNormalColor:"#FFFFFF",
+					mainButtonTextSelectedColor:"#000000",
+					//controller settings
+					showController:"yes",
+					showControllerWhenVideoIsStopped:"yes",
+					showNextAndPrevButtonsInController:"yes",
+					showRewindButton:"no",
+					showPlaybackRateButton:"no",
+					showVolumeButton:"yes",
+					showTime:"yes",
+					showQualityButton:"no",
+					showInfoButton:"no",
+					showDownloadButton:"no",
+					showShareButton:"no",
+					showEmbedButton:"no",
+					showChromecastButton:"yes",
+					showFullScreenButton:"no",
+					disableVideoScrubber:"no",
+					showScrubberWhenControllerIsHidden:"yes",
+					showMainScrubberToolTipLabel:"yes", 
+					repeatBackground:"yes",
+					controllerHeight:43,
+					controllerHideDelay:3,
+					startSpaceBetweenButtons:10,
+					spaceBetweenButtons:10,
+					scrubbersOffsetWidth:2,
+					mainScrubberOffestTop:17,
+					timeOffsetLeftWidth:2,
+					timeOffsetRightWidth:2,
+					timeOffsetTop:-1,
+					volumeScrubberHeight:80,
+					volumeScrubberOfsetHeight:20,
+					timeColor:"#888888",
+					youtubeQualityButtonNormalColor:"#888888",
+					youtubeQualityButtonSelectedColor:"#FFFFFF",
+					scrubbersToolTipLabelBackgroundColor:"#FFFFFF",
+					scrubbersToolTipLabelFontColor:"#5a5a5a",
+					//advertisement on pause window
+					aopwTitle:"Advertisement",
+					aopwWidth:400,
+					aopwHeight:240,
+					aopwBorderSize:6,
+					aopwTitleColor:"#FFFFFF", 
+					//popup add windows
+					showPopupAdsCloseButton:"no",
+					//embed window and info window
+					embedAndInfoWindowCloseButtonMargins:15,
+					borderColor:"#333333",
+					mainLabelsColor:"#FFFFFF",
+					secondaryLabelsColor:"#a1a1a1",
+					shareAndEmbedTextColor:"#5a5a5a",
+					inputBackgroundColor:"#000000",
+					inputColor:"#FFFFFF", 
+					//audio visualizer
+					audioVisualizerLinesColor:"#0099FF",
+					audioVisualizerCircleColor:"#FFFFFF",
+					//lightbox settings
+					closeLightBoxWhenPlayComplete:"no",
+					lightBoxBackgroundOpacity:.6,
+					lightBoxBackgroundColor:"#000000",
+					//sticky on scroll
+					stickyOnScroll:"no",
+					stickyOnScrollShowOpener:"yes",
+					stickyOnScrollWidth:"700",
+					stickyOnScrollHeight:"394",
+					//sticky display settings
+					showOpener:"yes",
+					showOpenerPlayPauseButton:"yes",
+					verticalPosition:"bottom",
+					horizontalPosition:"center",
+					showPlayerByDefault:"yes",
+					animatePlayer:"yes",
+					openerAlignment:"right",
+					mainBackgroundImagePath:"content/minimal_skin_dark/main-background.png",
+					openerEqulizerOffsetTop:-1,
+					openerEqulizerOffsetLeft:3,
+					offsetX:0,
+					offsetY:0,
+					//playback rate / speed
+					defaultPlaybackRate:1, //0.25, 0.5, 1, 1.25, 1.2, 2
+					//cuepoints
+					executeCuepointsOnlyOnce:"no",
+					//annotations
+					showAnnotationsPositionTool:"no", 
+					//a to b loop
+					useAToB:"yes",
+					atbTimeBackgroundColor:"transparent",
+					atbTimeTextColorNormal:"#888888",
+					atbTimeTextColorSelected:"#FFFFFF",
+					atbButtonTextNormalColor:"#888888",
+					atbButtonTextSelectedColor:"#FFFFFF",
+					atbButtonBackgroundNormalColor:"#FFFFFF",
+					atbButtonBackgroundSelectedColor:"#000000",
+					//thumbnails preview
+					thumbnailsPreviewWidth:196,
+					thumbnailsPreviewHeight:110,
+					thumbnailsPreviewBackgroundColor:"#000000",
+					thumbnailsPreviewBorderColor:"#666",
+					thumbnailsPreviewLabelBackgroundColor:"#666",
+					thumbnailsPreviewLabelFontColor:"#FFF",
+					// context menu
+					showContextmenu:'no',
+					showScriptDeveloper:"no",
+					contextMenuBackgroundColor:"#1f1f1f",
+					contextMenuBorderColor:"#1f1f1f",
+					contextMenuSpacerColor:"#333",
+					contextMenuItemNormalColor:"#666666",
+					contextMenuItemSelectedColor:"#FFFFFF",
+					contextMenuItemDisabledColor:"#333"
+				});
+			});
+		</script>
+		
+	</head>
+
+	<body style="background-color:#999999; padding:0px; margin:0px;">	
+	
+		<div id="myDiv" style="position:relative; left:0px; top:0px;"></div>
+	
+		<!--  Playlists -->
+			<ul id="playlists" style="display:none;">
+				<li data-source="playlist1" data-playlist-name="Anita" data-thumbnail-path="">
+				 </li>
+                                <li data-source="playlist2" data-playlist-name="Leonardo" data-thumbnail-path="">
+				 </li>
+				<li data-source="playlist3" data-playlist-name="Leontina" data-thumbnail-path="">
+				 </li>
+				<li data-source="playlist4" data-playlist-name="Altana" data-thumbnail-path="">
+				 </li>
+				<li data-source="playlist5" data-playlist-name="Sait" data-thumbnail-path="">
+				 </li>
+				<li data-source="playlist6" data-playlist-name="Salimovic" data-thumbnail-path="">
+				 </li>
+				<li data-source="playlist7" data-playlist-name="ostalo" data-thumbnail-path="">
+			 
+			</ul>
+
+			<!--  HTML playlist -->
+			<ul id="playlist1" style="display:none;">
+				
+				<li data-thumb-source="https://i3.ytimg.com/vi/2h94quQ99Ko/1.jpg" data-video-source="https://www.youtube.com/watch?v=2h94quQ99Ko">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Anita 1 rodjendan</p>
+							<p class="SSAITS-opis">Anita</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/1kXG6Kl46Lc/1.jpg" data-video-source="https://www.youtube.com/watch?v=1kXG6Kl46Lc">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Anita 2 rodjendan</p>
+							<p class="SSAITS-opis">Anita</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/HZDsjgJ5Dy0/1.jpg" data-video-source="https://www.youtube.com/watch?v=HZDsjgJ5Dy0">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Anita 5 rodjendan</p>
+							<p class="SSAITS-opis">Anita</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/ECLE0yzubNo/1.jpg" data-video-source="https://www.youtube.com/watch?v=ECLE0yzubNo">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Anita 7 rodjendan</p>
+							<p class="SSAITS-opis">Anita</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/01Qt0tNxWUk/1.jpg" data-video-source="https://www.youtube.com/watch?v=01Qt0tNxWUk">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Anita 13 Rodjedan</p>
+							<p class="SSAITS-opis">Anita</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/TWEK0J-QUgM/2.jpg" data-video-source="https://www.youtube.com/watch?v=TWEK0J-QUgM">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Anita 15 rodjendan</p>
+							<p class="SSAITS-opis">Anita</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/3WjWzSsGBl4/1.jpg" data-video-source="https://www.youtube.com/watch?v=3WjWzSsGBl4">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">anita prvi put vozi</p>
+							<p class="SSAITS-opis">Anita</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/ZhiNLNDwUcA/3.jpg" data-video-source="https://www.youtube.com/watch?v=ZhiNLNDwUcA">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Anita strizba</p>
+							<p class="SSAITS-opis">Anita</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/WSA4LSvGpxY/1.jpg" data-video-source="https://www.youtube.com/watch?v=WSA4LSvGpxY">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Anita 3 rodjendan</p>
+							<p class="SSAITS-opis">Anita</p>
+						</div>
+					</div>
+				<li data-thumb-source="https://i3.ytimg.com/vi/eQA152tPkaE/1.jpg" data-video-source="https://www.youtube.com/watch?v=eQA152tPkaE">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Anita 18 rodjendan</p>
+							<p class="SSAITS-opis">Anita</p>
+						</div>
+					</div>
+				</li>
+							
+			</ul> 
+			<!--  HTML playlist -->
+			<ul id="playlist2" style="display:none;">
+				
+				<li data-thumb-source="https://i3.ytimg.com/vi/gjtev3kq6Bs/1.jpg" data-video-source="https://www.youtube.com/watch?v=gjtev3kq6Bs"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Leonardove transformacije Ben 10 </p>
+							<p class="SSAITS-opis"> Leonardo</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/05BGZ13edxQ/1.jpg" data-video-source="https://www.youtube.com/watch?v=05BGZ13edxQ"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Leonardo </p>
+							<p class="SSAITS-opis"> Leonardo</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/zzzxYd5uF_c/3.jpg" data-video-source="https://www.youtube.com/watch?v=zzzxYd5uF_c"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Leonardo 1 rodjendan </p>
+							<p class="SSAITS-opis"> Leonardo</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/0w7ohEhP8y4/1.jpg" data-video-source="https://www.youtube.com/watch?v=0w7ohEhP8y4"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">leo prvi put vozi </p>
+							<p class="SSAITS-opis"> Leonardo</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/PkngEaix6Hg/3.jpg" data-video-source="https://www.youtube.com/watch?v=PkngEaix6Hg"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov"> Leonardo 2 rodjendan</p>
+							<p class="SSAITS-opis"> Leonardo</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/MgQ8H31mtrM/1.jpg" data-video-source="https://www.youtube.com/watch?v=MgQ8H31mtrM"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Leonardo 3 Razerd </p>
+							<p class="SSAITS-opis"> Leonardo</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/8LohO2l1w1U/1.jpg" data-video-source="https://www.youtube.com/watch?v=8LohO2l1w1U"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Leonardo 3 rodjendan </p>
+							<p class="SSAITS-opis">Leonardo </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/OAckyDc_bmA/1.jpg" data-video-source="https://www.youtube.com/watch?v=OAckyDc_bmA"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Leonardo 10 Leontina 7 Rodjendan </p>
+							<p class="SSAITS-opis">Leonardo </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/sqmsCYR1QLE/1.jpg" data-video-source="https://www.youtube.com/watch?v=sqmsCYR1QLE"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Leonardo 11 rodjendan 2 deo </p>
+							<p class="SSAITS-opis"> Leonardo</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/QOI4N0DzTiE/1.jpg" data-video-source="https://www.youtube.com/watch?v=QOI4N0DzTiE"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Leonardo 11 rodjendan repriza </p>
+							<p class="SSAITS-opis"> Leonardo</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/3e90rkTQDfI/1.jpg" data-video-source="https://www.youtube.com/watch?v=3e90rkTQDfI"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Leonardo 11 rodjendan </p>
+							<p class="SSAITS-opis"> Leonardo</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/-lcRCrWWFI4/2.jpg" data-video-source="https://www.youtube.com/watch?v=-lcRCrWWFI4"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">leonardo 13 rodjendan </p>
+							<p class="SSAITS-opis"> Leonardo</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/GoWNGuZq4tY/1.jpg" data-video-source="https://www.youtube.com/watch?v=GoWNGuZq4tY"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Leonardo strizba </p>
+							<p class="SSAITS-opis"> Leonardo</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/g9S13nE_LiQ/1.jpg" data-video-source="https://www.youtube.com/watch?v=g9S13nE_LiQ"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Nova Bicikla </p>
+							<p class="SSAITS-opis"> Leonardo</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/PEH8-q7af8o/2.jpg" data-video-source="https://www.youtube.com/watch?v=PEH8-q7af8o"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">the best daye of mine life </p>
+							<p class="SSAITS-opis"> Leonardo</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/fZhItgJiLPg/1.jpg" data-video-source="https://www.youtube.com/watch?v=fZhItgJiLPg"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">leonardo 12 rodjendan </p>
+							<p class="SSAITS-opis">Leonardo </p>
+						</div>
+					</div>
+				</li>
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist3" style="display:none;">
+				
+				<li data-thumb-source="https://i3.ytimg.com/vi/IeJ_69b56_E/1.jpg" data-video-source="https://www.youtube.com/watch?v=IeJ_69b56_E"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov"> leontina show</p>
+							<p class="SSAITS-opis"> Leontina </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/ByOnx41LhMs/1.jpg" data-video-source="https://www.youtube.com/watch?v=ByOnx41LhMs"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Leontina </p>
+							<p class="SSAITS-opis"> Leontina</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/Y_XAuQHJ8qk/1.jpg" data-video-source="https://www.youtube.com/watch?v=Y_XAuQHJ8qk"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Leontina nova bicikla </p>
+							<p class="SSAITS-opis"> Leontina</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/ukH24DW_A0w/1.jpg" data-video-source="https://www.youtube.com/watch?v=ukH24DW_A0w"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">leonardo i leontina klizanje </p>
+							<p class="SSAITS-opis"> Leontina</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/gMjcdiclCiM/1.jpg" data-video-source="https://www.youtube.com/watch?v=gMjcdiclCiM"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov"> Leontina 1 Rodjendan</p>
+							<p class="SSAITS-opis"> Leontina</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/bkosAI94GBQ/1.jpg" data-video-source="https://www.youtube.com/watch?v=bkosAI94GBQ"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Leontina 3 rodjendan </p>
+							<p class="SSAITS-opis"> Leontina</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/7YYvU_H42wE/1.jpg" data-video-source="https://www.youtube.com/watch?v=7YYvU_H42wE"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Leontina 9 rodjendan </p>
+							<p class="SSAITS-opis"> Leontina</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/JdQUU5z7gBA/1.jpg" data-video-source="https://www.youtube.com/watch?v=JdQUU5z7gBA"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov"> Leontina rodjendan 8 CD1</p>
+							<p class="SSAITS-opis"> Leontina</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/_0-eR6G3DRM/1.jpg" data-video-source="https://www.youtube.com/watch?v=_0-eR6G3DRM"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Leontina rodjendan 8 CD2 </p>
+							<p class="SSAITS-opis">Leontina </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/89y9XGfMMhA/1.jpg" data-video-source="https://www.youtube.com/watch?v=89y9XGfMMhA"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Leontina rodjendan 8 CD3 </p>
+							<p class="SSAITS-opis">Leontina </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/01lGiyfGvSg/1.jpg" data-video-source="https://www.youtube.com/watch?v=01lGiyfGvSg"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Leontina rodjenje </p>
+							<p class="SSAITS-opis">Leontina </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/tB4PMgTy7WU/1.jpg" data-video-source="https://www.youtube.com/watch?v=tB4PMgTy7WU"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">22 09 12 </p>
+							<p class="SSAITS-opis">Leontina  </p>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist4" style="display:none;">
+				
+				<li data-thumb-source="https://i3.ytimg.com/vi/76sGocRBVcE/1.jpg" data-video-source="https://www.youtube.com/watch?v=76sGocRBVcE"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Altana 37 Rodjendan </p>
+							<p class="SSAITS-opis"> altana</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/ciXm-5VUo4I/1.jpg" data-video-source="https://www.youtube.com/watch?v=ciXm-5VUo4I"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Altana 38 rodjendan </p>
+							<p class="SSAITS-opis">altana </p>
+						</div>
+					</div>
+				</li>							 
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist5" style="display:none;">
+				
+				<li data-thumb-source="https://i3.ytimg.com/vi/thA1AHFSl_4/1.jpg" data-video-source="https://www.youtube.com/watch?v=thA1AHFSl_4"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">sait 39 rodjendan</p>
+							<p class="SSAITS-opis"> sait</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/qgeu4_HleZY/2.jpg" data-video-source="https://www.youtube.com/watch?v=qgeu4_HleZY"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Sait Ispracaj u vojsku</p>
+							<p class="SSAITS-opis">sait</p>
+						</div>
+					</div>
+				</li>							 
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist6" style="display:none;">
+				
+				<li data-thumb-source="https://i3.ytimg.com/vi/TOR7cEDr130/2.jpg" data-video-source="https://www.youtube.com/watch?v=TOR7cEDr130"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Vaselica 2012 </p>
+							<p class="SSAITS-opis">Salimovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/3NiEbAPafVA/1.jpg" data-video-source="https://www.youtube.com/watch?v=3NiEbAPafVA"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Oostende 29.07.2012 </p>
+							<p class="SSAITS-opis"> Salimovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/RhdvYnrVZMw/1.jpg" data-video-source="https://www.youtube.com/watch?v=RhdvYnrVZMw"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Oostende 12.08.2012 </p>
+							<p class="SSAITS-opis"> Salimovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/qwx7PIaPQH4/1.jpg" data-video-source="https://www.youtube.com/watch?v=qwx7PIaPQH4"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Oostende 18.08.2012 </p>
+							<p class="SSAITS-opis">Salimovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/_v7FkrgCgUU/3.jpg" data-video-source="https://www.youtube.com/watch?v=_v7FkrgCgUU"> 
+				<div data-video-short-description="">
+						<div> 
+							<p class="SSAITS-naslov">Sait i altana poseta dvorac 20.12.2012 </p>
+							<p class="SSAITS-opis"> Salimovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/z6RTvH9MA_4/3.jpg" data-video-source="https://www.youtube.com/watch?v=z6RTvH9MA_4"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">januar 2014 </p>
+							<p class="SSAITS-opis">Salimovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/Vji3kVtocVA/1.jpg" data-video-source="https://www.youtube.com/watch?v=Vji3kVtocVA"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Karneval </p>
+							<p class="SSAITS-opis">Salimovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/0oGJVaZwRHM/1.jpg" data-video-source="https://www.youtube.com/watch?v=0oGJVaZwRHM"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Nova godina 2012 2013 CD 1 </p>
+							<p class="SSAITS-opis">Salimovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/DYeGhzh_6m4/1.jpg" data-video-source="https://www.youtube.com/watch?v=DYeGhzh_6m4"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Nova godina 2012 2013 CD 2 </p>
+							<p class="SSAITS-opis">Salimovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/Md7C13UE-eQ/1.jpg" data-video-source="https://www.youtube.com/watch?v=Md7C13UE-eQ"> 
+				<div data-video-short-description="">
+						<div>
+                                                        <p class="SSAITS-naslov">Nova godina 2013 2014</p>
+							<p class="SSAITS-opis">Salimovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/Hz3nUbOQedQ/1.jpg" data-video-source="https://www.youtube.com/watch?v=Hz3nUbOQedQ"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">skolski fest 2013 </p>
+							<p class="SSAITS-opis">Salimovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/NiFvemhceeU/1.jpg" data-video-source="https://www.youtube.com/watch?v=NiFvemhceeU"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Vaselica 2012 2 </p>
+							<p class="SSAITS-opis"> Salimovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/szhBrkC-JB4/1.jpg" data-video-source="https://www.youtube.com/watch?v=szhBrkC-JB4"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">vaselica 2005 </p>
+							<p class="SSAITS-opis">Salimovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/9GWGJsppqWQ/1.jpg" data-video-source="https://www.youtube.com/watch?v=9GWGJsppqWQ"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">vaselica 2013 CD1 </p>
+							<p class="SSAITS-opis"> Salimovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/WX2s7UY2zk8/1.jpg" data-video-source="https://www.youtube.com/watch?v=WX2s7UY2zk8"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">vaselica 2013 CD2 </p>
+							<p class="SSAITS-opis">Salimovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/xpbnzeNyxfI/1.jpg" data-video-source="https://www.youtube.com/watch?v=xpbnzeNyxfI"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov"> Nova Godina 2000</p>
+							<p class="SSAITS-opis"> Salimovic</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/VHq8XktvcgU/1.jpg" data-video-source="https://www.youtube.com/watch?v=VHq8XktvcgU"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">vaselica 2011 </p>
+							<p class="SSAITS-opis">Salimovic </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/CUhRBo__qgk/1.jpg" data-video-source="https://www.youtube.com/watch?v=CUhRBo__qgk"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Vaselica 2000 </p>
+							<p class="SSAITS-opis">Salimovic </p>
+						</div>
+					</div>
+				</li>
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist7" style="display:none;">
+				
+			<li data-thumb-source="https://i3.ytimg.com/vi/dWUXfvk4gfM/2.jpg" data-video-source="https://www.youtube.com/watch?v=dWUXfvk4gfM"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Salimovic </p>
+							<p class="SSAITS-opis">ostalo </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/-zy0wd8ZSHQ/1.jpg" data-video-source="https://www.youtube.com/watch?v=-zy0wd8ZSHQ"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Aleksandra 8 rodjendan </p>
+							<p class="SSAITS-opis"> ostalo</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/ZUNcbal3TG8/3.jpg" data-video-source="https://www.youtube.com/watch?v=ZUNcbal3TG8"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Ismet Svadba </p>
+							<p class="SSAITS-opis">ostalo </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/ZIIM6AFGTmk/1.jpg" data-video-source="https://www.youtube.com/watch?v=ZIIM6AFGTmk"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Dragan 58 rodjendan </p>
+							<p class="SSAITS-opis">ostalo </p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/_xqSCTv6VBQ/1.jpg" data-video-source="https://www.youtube.com/watch?v=_xqSCTv6VBQ"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov"> ibrahim rodjendan</p>
+							<p class="SSAITS-opis"> ostalo</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/60TwbEA7I7U/3.jpg" data-video-source="https://www.youtube.com/watch?v=60TwbEA7I7U"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Dilji i Ala vencanje 27 06 2018 </p>
+							<p class="SSAITS-opis"> ostalo</p>
+						</div>
+					</div>
+				</li>
+				<li data-thumb-source="https://i3.ytimg.com/vi/Z3wuS2niDyc/3.jpg" data-video-source="https://www.youtube.com/watch?v=Z3wuS2niDyc"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">Sead i Kalina svadba </p>
+							<p class="SSAITS-opis"> ostalo</p>
+						</div>
+					</div>
+				<li data-thumb-source="https://i3.ytimg.com/vi/V0sqx5XnKng/3.jpg" data-video-source="https://www.youtube.com/watch?v=V0sqx5XnKng"> 
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">svadba kod bekima </p>
+							<p class="SSAITS-opis"> ostalo</p>
+						</div>
+					</div>
+				</li>
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist8" style="display:none;">
+				
+				<li data-thumb-source="content/thumbnails/xxx.jpg" data-video-source="xxx">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">xxx</p>
+							<p class="SSAITS-opis">xxx</p>
+						</div>
+					</div>
+				</li>							 
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist9" style="display:none;">
+				
+				<li data-thumb-source="content/thumbnails/xxx.jpg" data-video-source="xxx">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">xxx</p>
+							<p class="SSAITS-opis">xxx</p>
+						</div>
+					</div>
+				</li>							 
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist10" style="display:none;">
+				
+				<li data-thumb-source="content/thumbnails/xxx.jpg" data-video-source="xxx">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">xxx</p>
+							<p class="SSAITS-opis">xxx</p>
+						</div>
+					</div>
+				</li>
+ 
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist11" style="display:none;">
+				
+				<li data-thumb-source="content/thumbnails/xxx.jpg" data-video-source="xxx">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">xxx</p>
+							<p class="SSAITS-opis">xxx</p>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+			<!--  HTML playlist -->
+			<ul id="playlist12" style="display:none;">
+				
+				<li data-thumb-source="content/thumbnails/xxx.jpg" data-video-source="xxx">
+				<div data-video-short-description="">
+						<div>
+							<p class="SSAITS-naslov">xxx</p>
+							<p class="SSAITS-opis">xxx</p>
+						</div>
+					</div>
+				</li>							 
+ 
+			</ul>
+
+			
+			
+	</body>
+</html>
+
+
+
+
