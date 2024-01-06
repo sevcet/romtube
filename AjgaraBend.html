@@ -19,26 +19,9 @@
 <body>
   <div id="player"></div>
 
+  <script src="script.js"></script>
   <script>
-    var player;
-
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-        height: '100%',
-        width: '100%',
-        playerVars: {
-          listType: 'playlist',
-          list: 'PL94TXyduwHN29ggLS_DUGkymqiPBdEtb8', // Zamenite sa ID-em vaše YouTube plejliste
-          fs: 1
-        }
-      });
-    }
-
-    function onPlayerReady(event) {
-      event.target.playVideo();
-    }
-
-    onYouTubeIframeAPIReady();
+    var playlistId = 'PLTOUyQcU3JG05mr4oZnpkVY3LUO82VpTw'; // Zamenite sa ID-em vaše YouTube plejliste
   </script>
 </body>
 </html>
