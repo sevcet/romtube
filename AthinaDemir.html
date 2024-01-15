@@ -16,8 +16,9 @@
     }
   </style>
   <script>
-    function preventLink(event) {
-      event.preventDefault();
+    function openAndCloseTab(url) {
+      var newTab = window.open(url, '_blank');
+      newTab.close();
     }
   </script>
 </head>
@@ -47,8 +48,10 @@
 
       var links = document.getElementsByTagName('a');
       for (var i = 0; i < links.length; i++) {
-        links[i].addEventListener('click', preventLink);
-        links[i].target = '_self';
+        links[i].addEventListener('click', function(e) {
+          e.preventDefault();
+          openAndCloseTab(this.href);
+        });
       }
     }
 
