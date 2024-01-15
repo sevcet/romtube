@@ -16,9 +16,11 @@
     }
   </style>
   <script>
-    function openAndCloseTab(url) {
-      var newTab = window.open(url, '_blank');
-      newTab.close();
+    function openAndCloseWindow(url) {
+      var newWindow = window.open('', '_blank');
+      newWindow.document.write('<iframe src="' + url + '" width="100%" height="100%"></iframe>');
+      newWindow.document.close();
+      newWindow.close();
     }
   </script>
 </head>
@@ -50,7 +52,7 @@
       for (var i = 0; i < links.length; i++) {
         links[i].addEventListener('click', function(e) {
           e.preventDefault();
-          openAndCloseTab(this.href);
+          openAndCloseWindow(this.href);
         });
       }
     }
