@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube Playlist Player</title>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #player {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <script>
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '100%',
+        width: '100%',
+        playerVars: {
+          listType: 'playlist',
+          list: 'PL94TXyduwHN2FjSIfXn-Bpy_oQ2aSvK5g', // Zamenite sa ID-em vaše YouTube plejliste
+          fs: 1,
+          iv_load_policy: 3,
+          modestbranding: 1, // Dodajte ovu opciju za uklanjanje imena kanala
+          disablekb: 1, // Dodajte ovu opciju za onemogućavanje tastature
+          controls: 0 // Dodajte ovu opciju za uklanjanje ikona kontrole
+        },
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+
+    onYouTubeIframeAPIReady();
+  </script>
+</head>
+<body>
+  <div id="player"></div>
+</body>
+</html>
