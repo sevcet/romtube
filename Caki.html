@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube Playlist Player</title>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #player {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="player"></div>
+
+  <script>
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '100%',
+        width: '100%',
+        playerVars: {
+          listType: 'playlist',
+          list: 'PL94TXyduwHN3oUzrHXCqwHAOrOGqGSM0D', // Zamenite sa ID-em vaše YouTube plejliste
+          fs: 1
+        },
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+
+    onYouTubeIframeAPIReady();
+  </script>
+</body>
+</html>
