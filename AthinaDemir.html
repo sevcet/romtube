@@ -15,6 +15,10 @@
       height: 100%;
     }
   </style>
+</head>
+<body>
+  <div id="player"></div>
+
   <script>
     var player;
 
@@ -25,8 +29,7 @@
         playerVars: {
           listType: 'playlist',
           list: 'PL94TXyduwHN2FjSIfXn-Bpy_oQ2aSvK5g', // Zamenite sa ID-em vaše YouTube plejliste
-          fs: 1,
-          iv_load_policy: 3
+          fs: 1
         },
         events: {
           'onReady': onPlayerReady
@@ -40,8 +43,5 @@
 
     onYouTubeIframeAPIReady();
   </script>
-</head>
-<body>
-  <div id="player"></div>
 </body>
 </html>
