@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>YouTube Playlist Player</title>
+  <title>YouTube Playlist Player with Chromecast</title>
   <script src="https://www.youtube.com/iframe_api"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js"></script>
   <style>
     html, body {
       height: 100%;
@@ -14,10 +16,17 @@
       width: 100%;
       height: 100%;
     }
+
+    #castButton {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
   </style>
 </head>
 <body>
   <div id="player"></div>
+  <button id="castButton">Cast</button>
 
   <script>
     var player;
@@ -39,6 +48,29 @@
 
     function onPlayerReady(event) {
       event.target.playVideo();
+
+      // Dodajte Cast dugme i manipulaciju događajima
+      var castButton = document.getElementById('castButton');
+      castButton.addEventListener('click', function () {
+        launchCast();
+      });
+    }
+
+    function launchCast() {
+      var options = new chrome.cast.media.LoadRequest();
+      options.autoplay = true;
+      options.currentTime = player.getCurrentTime();
+
+      var mediaInfo = new chrome.cast.media.MediaInfo('https://www.youtube.com/watch?v=' + player.getVideoData().video_id);
+      var request = new chrome.cast.media.LoadRequest(mediaInfo);
+
+      chrome.cast.requestSession(function (session) {
+        session.loadMedia(request, onMediaDiscovered, function () { });
+      }, function (error) { console.log('Error selecting a Cast device: ' + error.code); });
+    }
+
+    function onMediaDiscovered(media) {
+      console.log('Media discovered ', media);
     }
 
     onYouTubeIframeAPIReady();
