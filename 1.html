@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>YouTube Playlist Player</title>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <!-- Dodajte Google Cast SDK -->
+    <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #player {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="player"></div>
+
+    <button onclick="castVideo()">Emitiraj na Chromecast</button>
+
+    <script>
+        var player;
+        var castSession;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '100%',
+                width: '100%',
+                playerVars: {
+                    listType: 'playlist',
+                    list: 'PL3Nx1SsJRFBOroa4z8tSvFxj1IVk0T5OX', // Zamijenite sa ID-em vaše YouTube plejliste
+                    fs: 1
+                },
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+
+        // Dodajte funkciju za emitiranje na Chromecast
+        function castVideo() {
+            castSession = new cast.framework.CastSession();
+            castSession.getSessionState();
+            var castContext = cast.framework.CastContext.getInstance();
+            castContext.setOptions({
+                receiverApplicationId: chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,
+                autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
+            });
+            castContext.requestSession().then(
+                function (session) {
+                    var mediaInfo = new chrome.cast.media.MediaInfo(player.getVideoUrl());
+                    var request = new chrome.cast.media.LoadRequest(mediaInfo);
+                    session.loadMedia(request);
+                },
+                function (errorCode) {
+                    console.log('Error selecting a Cast device: ' + errorCode);
+                }
+            );
+        }
+
+        onYouTubeIframeAPIReady();
+    </script>
+</body>
+
+</html>
+https://www.youtube.com/watch?v=i_SQA_s7Xbw&list=PL3Nx1SsJRFBOroa4z8tSvFxj1IVk0T5OX
