@@ -1,47 +1,417 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-  <title>YouTube Playlist Player</title>
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
+	<meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
+    <meta name="keywords" content="Ahmet, Rasimov, Ajagra, Bend, Al Alion, Alen, Alex, Amza, Amco, Asmet, Athina, Audicija, Bernat, Cita, Caki, Djansever, Djefrina, Dzefrina, Djemail, Gasi, Emanuel, Enco, Erdjan, Ameti, Ervin, Gjuner, Fabijan, Gardijan, Fdilj, Gunes, Irijeta, Jevat Star, Julia Bikova, Latino, Leo, Lorens, Necko, Nedjo, Dzipsi, Energy, ork, Europa, Facebook, Gazoza, Fanta, Gipsy, Juzni, Kovaci, Ritam, Mlade, Zvezde, Mladi, Decaci, Krisrtali, Orioni, Talenti, Plava, Zvezde, Struja, Titanik, Versaci, Ramadan, Bislim, Ramko, Ramiz, Redjep, Ruzdi, Saban, Maksut, Bajramovic, Sekil, Selam, Senat, Sero, Sevcet, Sevgul, Stanislav, Silistarevic, Sunaj, Tair, Tarkan, Zvonko, Ferus,Bijava, Oro, Horo, Bijav, Demirovic, Sacipi, Hasan, Hajrusi, Mustafa, Sabanovic, Bojan, Senjur, Ramona, Dalipova, Sebo, Zoran, Novica, Ferdi, Emran, Goran, Kamberovic, Maki, Zekic, Adlan, Salimovic, Cobe, Batijarevic, Bajce, Eno, Enver, Sali, Oka, KlepacOrhan, Derhan, Nedzo, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,"/>
+    <meta name="description" content="Ahmet Rasimov Ajagra Bend Al Alion Alen Alex Amza Amco Asmet Athina Audicija Bernat Cita Caki Djansever Djefrina Dzefrina Djemail Gasi Emanuel Enco Erdjan Ameti Ervin Gjuner Fabijan Gardijan Fdilj Gunes Irijeta Jevat Star Julia Bikova Latino Leo Lorens Necko Nedjo Dzipsi Energy ork Europa Facebook Gazoza Fanta Gipsy Juzni Kovaci Ritam Mlade Zvezde Mladi Decaci Krisrtali Orioni Talenti Plava Zvezde Struja Titanik Versaci Ramadan Bislim Ramko Ramiz Redjep Ruzdi Saban Maksut Bajramovic Sekil Selam Senat Sero Sevcet Sevgul Stanislav Silistarevic Sunaj Tair Tarkan Zvonko FerusBijava Oro Horo Bijav Demirovic Sacipi Hasan Hajrusi Mustafa Sabanovic Bojan Senjur Ramona Dalipova Sebo Zoran Novica Ferdi Emran Goran Kamberovic Maki Zekic Adlan Salimovic Cobe Batijarevic Bajce Eno Enver Sali Oka KlepacOrhan Derhan Nedzo 2010 2011 2012 2013 2014 2015 2016 2017"/>
+    <title>ROMOTEKA.COM</title>
+    <link rel="shortcut icon" href="#" title="Favicon" />
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 
-    #player {
-      width: 100%;
-      height: 100%;
-    }
-  </style>
+    <link rel="stylesheet" href="assets/css/semantic.min.css">
+    <link rel="stylesheet" href="assets/css/royalslider.css">
+    <link rel="stylesheet" href="assets/css/rs-default.css">
+    <link rel="stylesheet" href="assets/css/music-player.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Header JS -->
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+  
 </head>
 <body>
-  <div id="player"></div>
+            <div class="header">
+                <div class="container">
+                    <div class="logo_area fleft">
+                        <a href="index.html" rel="home">
+                            <img src="assets/images/2560.jpg" alt="Romtube">
+                        </a>
+                    </div>
+	<div id="page" class="hfeed site">
+		
+		<header id="masthead" class="ui page site-header" role="banner">
 
-  <script>
-    var player;
+            <div id="search-container" class="search-box-wrapper">
+                <div class="container">
+                  <div class="search-box">
+                      <form action="http://example.com/" class="search-form" role="search" >
+                        <label>
+                          <input type="search" name="s" value="" title="Press Enter to submit your search" placeholder="Search…" class="search-field">
+                        </label>
+                      </form>
+                    </div>
+                </div>
+            </div>
 
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-        height: '100%',
-        width: '100%',
-        playerVars: {
-          listType: 'playlist',
-          list: 'PLTOUyQcU3JG05mr4oZnpkVY3LUO82VpTw', // Zamenite sa ID-em vaše YouTube plejliste
-          fs: 1
-        },
-        events: {
-          'onReady': onPlayerReady
-        }
-      });
-    }
+            <div class="topbar"></div> 
 
-    function onPlayerReady(event) {
-      event.target.playVideo();
-    }
+            <div class="header"></div> 
 
-    onYouTubeIframeAPIReady();
-  </script>
+	  </header>
+
+        <div id="boxed_content" class="boxed_content">
+            <div class="inner">
+            
+            <nav id="primary-navigation" class="site-navigation primary-navigation clearfix" role="navigation">
+                <button class="menu-toggle">Navigation</button>
+                <a href="#content" class="screen-reader-text skip-link">Skip to content</a>
+                <div class="menu-all-pages-container">
+                    <ul class="nav-menu">
+                        <li class="menu-item-has-children"><a href="VIDEO-SPOT.html">VIDEO SPOT</a>
+                        
+                        <li class="menu-item-has-children"><a href="mp3.html">MP3 CD</a>
+                        
+                        <li class="menu-item-has-children"><a href="ROMOTEKA-RADIO.html">ROMOTEKA RADIO</a>
+                        
+                        <li class="menu-item-has-children"><a href="TV.html">TV</a>
+                        
+                        <li class="menu-item-has-children"><a href="http://novifilmovisaprevodom.com">FILM</a>
+                        
+                        <li class="menu-item-has-children"><a href="http://bijava.romoteka.com/">BIJAVA</a>
+                        	
+                  </ul>
+
+
+
+			  </div>
+				  
+				</div> 
+	  <script id="addJS">
+				jQuery(document).ready(function($) {
+						jQuery.rsCSS3Easing.easeOutBack = 'cubic-bezier(0.175, 0.885, 0.320, 1.275)';
+							$('#home-slider-1').royalSlider({
+							arrowsNav: true,
+							arrowsNavAutoHide: true,
+							fadeinLoadedSlide: false,
+							controlNavigationSpacing: 0,
+							controlNavigation: 'bullets',
+							imageScaleMode: 'none',
+							imageAlignCenter:false,
+							blockLoop: true,
+							loop: true,
+							numImagesToPreload: 6,
+							transitionType: 'fade',
+							keyboardNavEnabled: true,
+							block: {
+								delay: 400
+							}
+						});
+				});
+				</script>
+				
+				<div class="page-inner">
+					</div> 
+
+			</div>
+ <div class="page-content">
+                           
+                           
+                        <header class="page-header">
+                            <h1 class="page-title">purani romani muzika ko mp3</h1>
+                        </header> 
+<iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.romoteka.com%2F&layout=button_count&size=large&mobile_iframe=false&width=95&height=28&appId" width="95" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                        <div class="page-content">
+                            <div class="album_wrapper three column stackable doubling ui grid">
+                                
+                                <div class="column">
+                                    <div class="album">
+                                        <a href="AA.html">
+                                            <img src="thumb/mp3/a.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                      </a>
+                                  </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="album">
+                                        <a href="AB.html">
+                                            <img src="thumb/mp3/b.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="album">
+                                        <a href="AC.html">
+                                            <img src="thumb/mp3/c.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="column">
+                                    <div class="album">
+                                        <a href="AD.html">
+                                            <img src="thumb/mp3/d.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="column">
+                                    <div class="album">
+                                        <a href="AE.html">
+                                            <img src="thumb/mp3/e.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="album">
+                                        <a href="AF.html">
+                                            <img src="thumb/mp3/f.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="column">
+                                    <div class="album">
+                                        <a href="AG.html">
+                                            <img src="thumb/mp3/g.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>                                <div class="column">
+                                    <div class="album">
+                                        <a href="AI.html">
+                                            <img src="thumb/mp3/i.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>                                <div class="column">
+                                    <div class="album">
+                                        <a href="AJ.html">
+                                            <img src="thumb/mp3/j.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>                                <div class="column">
+                                    <div class="album">
+                                        <a href="AK.html">
+                                            <img src="thumb/mp3/k.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>                                <div class="column">
+                                    <div class="album">
+                                        <a href="AL.html">
+                                            <img src="thumb/mp3/l.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>                                <div class="column">
+                                    <div class="album">
+                                        <a href="AM.html">
+                                            <img src="thumb/mp3/m.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>                                <div class="column">
+                                    <div class="album">
+                                        <a href="AN.html">
+                                            <img src="thumb/mp3/n.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>                                <div class="column">
+                                    <div class="album">
+                                        <a href="AO.html">
+                                            <img src="thumb/mp3/o.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>                                <div class="column">
+                                    <div class="album">
+                                        <a href="AP.html">
+                                            <img src="thumb/mp3/p.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>                                <div class="column">
+                                    <div class="album">
+                                        <a href="AR.html">
+                                            <img src="thumb/mp3/r.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>                                <div class="column">
+                                    <div class="album">
+                                        <a href="AS.html">
+                                            <img src="thumb/mp3/s.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>                                <div class="column">
+                                    <div class="album">
+                                        <a href="AT.html">
+                                            <img src="thumb/mp3/t.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>                                <div class="column">
+                                    <div class="album">
+                                        <a href="AU.html">
+                                            <img src="thumb/mp3/u.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>                                <div class="column">
+                                    <div class="album">
+                                        <a href="AV.html">
+                                            <img src="thumb/mp3/v.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>                                <div class="column">
+                                    <div class="album">
+                                        <a href="AZ.html">
+                                            <img src="thumb/mp3/z.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="overlay_title">
+                                                
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>                               
+                            </div>
+                        </div>
+					</div>
+				</div> <!-- END .page-inner -->
+
+			</div><!-- END #content -->
+
+            </div>
+		</div> <!-- END #boxed-wrapper -->
+		
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="container">
+			  <div class="footer_copy">
+                  <div class="two column stackable ui grid">
+                        <div class="column copy_left">
+                            <p>Romoteka © 2017. ROMOTEKA</p>
+                        </div>
+                        <div class="column copy_right">
+                          <p> Template by <a href="http://www.romoteka.com">Romoteka </a></p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+		</footer>
+
+	</div>
+	  <script type="text/javascript" src="http://syndication.exdynsrv.com/splash.php?idzone=2469617"></script>
+<script type="text/javascript">
+var ad_idzone = "2469623",
+    ad_width = "120",
+    ad_height = "600",
+    v_pos = "middle",
+    h_pos = "right",
+    eventMethod = window.addEventListener ? "addEventListener" : "attachEvent",
+    eventer = window[eventMethod],
+    messageEvent = (eventMethod == "attachEvent") ? "onmessage" : "message";
+
+    eventer(messageEvent, (function(ad_idzone){
+        return function(e) { if (e.data == "show-iframe-" + ad_idzone) document.getElementById("sticky-banner-" + ad_idzone).style.display = ""; };
+    })(ad_idzone), false);
+</script>
+<script type="text/javascript" src="https://ads.exdynsrv.com/js.php?t=17&idzone=2469623"></script>
+<script type="text/javascript">
+var ad_idzone = "2469639",
+    ad_width = "120",
+    ad_height = "600",
+    v_pos = "top",
+    h_pos = "left",
+    eventMethod = window.addEventListener ? "addEventListener" : "attachEvent",
+    eventer = window[eventMethod],
+    messageEvent = (eventMethod == "attachEvent") ? "onmessage" : "message";
+
+    eventer(messageEvent, (function(ad_idzone){
+        return function(e) { if (e.data == "show-iframe-" + ad_idzone) document.getElementById("sticky-banner-" + ad_idzone).style.display = ""; };
+    })(ad_idzone), false);
+</script>
+<script type="text/javascript" src="https://ads.exdynsrv.com/js.php?t=17&idzone=2469639"></script>
+    <script src="assets/js/libs/semantic.min.js"></script>
+    <script src="assets/js/libs/fitVids.min.js"></script>
+    <script src="assets/js/libs/retina.min.js"></script>
+    <script src="assets/js/libs/jquery.plugin.min.js"></script>
+    <script src="assets/js/libs/jquery.countdown.min.js"></script>
+    <script src="assets/js/libs/jquery.royalslider.min.js"></script>
+    <script src="assets/js/libs/jquery.easing-1.3.js"></script>
+    <script src="assets/js/libs/jquery.jplayer.js"></script>
+    <script src="assets/js/libs/ttw-music-player.js"></script>
+    <script src="assets/js/libs/owl.carousel.min.js"></script>
+    <script src="assets/js/libs/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/libs/jquery.imagesloaded.min.js"></script>
+    <script src="assets/js/libs/isotope.pkgd.min.js"></script>
+    <script src="assets/js/global.js"></script>
+
 </body>
+
 </html>
